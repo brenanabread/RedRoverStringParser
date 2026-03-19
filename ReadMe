@@ -68,8 +68,12 @@ Doing this because it was drilled into me as a best practice in school, and so i
 4. Why not use Regex? because I'm not good at it.
     
     
+    
 HOW TO RUN: 
 I'm using JetBrains Rider, but use the IDE of your choice.  
 1. build
 2. push play
 3. In the terminal run "dotnet run --project" then the file path where you saved the project 
+
+Future Tasks: 
+1. remove silly comments so they dont get into prod
