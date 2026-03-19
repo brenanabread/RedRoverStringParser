@@ -43,7 +43,7 @@ Knowns:
     delimiter
 3. The second required output takes the fields, and puts them in alphabetical order. 
 4. The first required output takes the fields from the string in written order. 
-5. Input is currently NOT being given by a user, no current need for ingesting input from user. 
+5. Input is currently NOT being given by a user, no current need for ingesting input from a user. 
 
 Unknowns: 
 1. Currently, the string contains what I assume are either place holders with field names. Will the string 
@@ -56,21 +56,20 @@ to verify that email contains @ and . characters?
 
 
 Extra thoughts on construction: 
-1. Writing it in C# because thats what I know best at the moment via personal projects and work. 
-2. Dotnet because thats what I'm using for my personal projects
-3. "Single Responsibility Principle"--i am chunking this into the component parts or legos to snap together later.
-Doing this because it was drilled into me as a best practice in school, and so its both how i learned to build, but also what 
-I have been taught to expect? Idk that may be a hinderance in some orgs: 
+1. Writing it in C# because that's what I know best at the moment via personal projects and work. 
+2. Dotnet because that's what I'm using for my personal projects
+3. "Single Responsibility Principle"--I am chunking this into the component parts or legos to snap together later.
+Doing this because it was drilled into me as a best practice in school, and so its both how I learned to build: 
     a. data model is in field.cs
     b. field parsing logic is in fieldParser.cs
     c. field printing logic is in fieldPrinter.cs
     d. validation logic is in fieldValidator.cs
     e. orchestration and like where all the "legos" come together is in the boringly named program.cs
-4. Why not use Regex? because im not good at it
+4. Why not use Regex? because I'm not good at it.
     
     
 HOW TO RUN: 
-Im using JetBeans Rider, but use the IDE of your choice.  
+I'm using JetBrains Rider, but use the IDE of your choice.  
 1. build
 2. push play
 3. In the terminal run "dotnet run --project" then the file path where you saved the project 
