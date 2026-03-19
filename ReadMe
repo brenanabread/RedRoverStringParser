@@ -53,7 +53,7 @@ to verify that email contains @ and . characters?
 2. Should the string be rejected if any of the fields are missing? 
 3. Should the string be rejected if any of the fields are in an unexpected order? 
 4. will the String ever not be hard coded, like will it eventually be sent by a user or another system. 
-5. 
+
 
 Extra thoughts on construction: 
 1. Writing it in C# because thats what I know best at the moment via personal projects and work. 
