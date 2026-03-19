@@ -37,20 +37,40 @@ Please send access to the source and a runnable copy of your app.
 Knowns: 
 
 1. A string of personal information is being sent. 
-2. This string includes the following delimiters: commas , and parenthesis ()
-    a. parenthesis are used to denote indented fields in a child block of text
-    b. these indentations are under the last field name before the parenthesis, where there is no comma delimiter
+2. This string is a hierarchical, nested object tree that includes the following delimiters: commas , and parentheses () 
+    a. parentheses are used to denote indented fields in a child block of text
+    b. these indentations are under the last field name before the parenthesis, where there is no comma 
+    delimiter
 3. The second required output takes the fields, and puts them in alphabetical order. 
 4. The first required output takes the fields from the string in written order. 
- 
+5. Input is currently NOT being given by a user, no current need for ingesting input from user. 
 
 Unknowns: 
-1. It is not specified what sort of data each field/value contains. Are there special characters? Should name fields with
-numeric values be rejected? 
+1. Currently, the string contains what I assume are either place holders with field names. Will the string 
+eventually be sent with actual user data? It is not specified what sort of data each field/value contains.
+Are there special characters? Should name fields with numeric values be rejected? Will this eventually need
+to verify that email contains @ and . characters?  
 2. Should the string be rejected if any of the fields are missing? 
 3. Should the string be rejected if any of the fields are in an unexpected order? 
+4. will the String ever not be hard coded, like will it eventually be sent by a user or another system. 
+5. 
 
-
-Extra thoughts: 
-1. 
+Extra thoughts on construction: 
+1. Writing it in C# because thats what I know best at the moment via personal projects and work. 
+2. Dotnet because thats what I'm using for my personal projects
+3. "Single Responsibility Principle"--i am chunking this into the component parts or legos to snap together later.
+Doing this because it was drilled into me as a best practice in school, and so its both how i learned to build, but also what 
+I have been taught to expect? Idk that may be a hinderance in some orgs: 
+    a. data model is in field.cs
+    b. field parsing logic is in fieldParser.cs
+    c. field printing logic is in fieldPrinter.cs
+    d. validation logic is in fieldValidator.cs
+    e. orchestration and like where all the "legos" come together is in the boringly named program.cs
+4. Why not use Regex? because im not good at it
     
+    
+HOW TO RUN: 
+Im using JetBeans Rider, but use the IDE of your choice.  
+1. build
+2. push play
+3. In the terminal run "dotnet run --project" then the file path where you saved the project 
